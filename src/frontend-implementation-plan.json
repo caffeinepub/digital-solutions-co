@@ -1,21 +1,76 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove hero stats for experience and projects completed",
+  "title": "Rename brand to Wed Shilpi and remove pricing/partners/social icons",
   "requirements": [
     {
-      "id": "REQ-11",
-      "summary": "Remove the Experience and Projects Completed hero stats while keeping the hero layout balanced across breakpoints.",
+      "id": "REQ-12",
+      "summary": "Replace all user-facing branding text from \"aurora\" to \"Wed Shilpi\" across header/footer and document metadata (including relevant image alt text and copyright).",
       "acceptanceCriteria": [
-        "The homepage hero no longer displays the labels \"Experience\" or \"Completed\" (nor the paired stats such as \"5+\" years and \"50+\" projects).",
-        "Hero section layout remains visually balanced on mobile and desktop after the stats removal (no awkward empty spacing or misalignment).",
-        "No other marketing sections (Services, Process, FAQ, Contact), header, or footer content is removed or changed unintentionally."
+        "No visible UI text contains the old brand name \"aurora\".",
+        "Header and footer branding/alt text reflect \"Wed Shilpi\".",
+        "Footer copyright line reflects \"Wed Shilpi\"."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/marketing/HeroSection.tsx",
+          "path": "frontend/src/components/layout/SiteHeader.tsx",
           "operation": "modify",
-          "description": "Remove the hero metrics/stats block that shows \"Years / Experience\" and \"Projects / Completed\" (including their numeric badges), and adjust surrounding spacing/classes as needed so the hero content remains visually balanced on mobile and desktop."
+          "description": "Update header branding copy for the logo image (e.g., replace the current brand alt text with \"Wed Shilpi\") and ensure no legacy brand name remains in any header-rendered text."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Update footer branding copy (logo alt text and the copyright line) to use \"Wed Shilpi\" and ensure no legacy brand name remains in user-facing footer text."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update the document title (and any other visible metadata copy if applicable) to reflect the \"Wed Shilpi\" brand and remove the previous brand name."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Remove the pricing-related FAQ entry so the FAQ section contains no pricing questions, figures, or ranges.",
+      "acceptanceCriteria": [
+        "The FAQ item \"How much does a website cost?\" is removed from the rendered FAQ accordion.",
+        "No remaining FAQ answers contain pricing figures or pricing ranges."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/FaqSection.tsx",
+          "operation": "modify",
+          "description": "Remove the pricing FAQ item (question: \"How much does a website cost?\") from the FAQ list and review remaining FAQ answers to ensure none include pricing figures/ranges. Use the shadcn-ui Accordion already in this file to render the updated list; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Remove all mentions of professional photography partners from site content, including the content/images FAQ answer.",
+      "acceptanceCriteria": [
+        "No section (including FAQs) mentions recommending partners for professional photography.",
+        "The FAQ item about content/images is updated to remove the partner referral sentence while keeping the rest coherent in English."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/FaqSection.tsx",
+          "operation": "modify",
+          "description": "Edit the \"Can you help with website content and images?\" FAQ answer to remove the professional photography partner referral sentence while keeping the answer coherent and natural English. Use the shadcn-ui Accordion already in this file to render the updated content; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Remove Facebook, Instagram, X, and LinkedIn social icons/links from the site, including the footer icon row.",
+      "acceptanceCriteria": [
+        "The footer no longer renders icons/links for Facebook, Instagram, X, or LinkedIn.",
+        "No social media icon components for those networks remain visible anywhere on the site."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/layout/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Remove imports and rendered UI for the Facebook/Instagram/X/LinkedIn icon row (including associated anchor tags and aria-labels) so no social icons/links for those networks render in the footer."
         }
       ]
     }

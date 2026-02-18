@@ -1,25 +1,76 @@
 {
   "kind": "build_request",
-  "title": "Remove hero stats for experience and projects completed",
-  "projectName": "ClientSite Studio",
+  "title": "Rename brand to Wed Shilpi and remove pricing/partners/social icons",
+  "projectName": "Wed Shilpi",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-11",
-      "text": "Remove the \"Experience\" and \"Projects completed\" stats/metrics from the website hero section so they are no longer visible anywhere on the page.",
+      "id": "REQ-12",
+      "text": "Replace the site/company name everywhere in user-facing copy from \"aurora\" to \"Wed Shilpi\" (including header/footer branding text, image alt text, and copyright text where applicable).",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-3"
+          "msg-4"
         ],
         "quotes": [
-          "Yes but can you remove the expereience part and projects completed part?"
+          "Can you change the name aurora to Wed Shilpi."
         ]
       },
       "acceptanceCriteria": [
-        "The homepage hero no longer displays the labels \"Experience\" or \"Completed\" (nor the paired stats such as \"5+\" years and \"50+\" projects).",
-        "Hero section layout remains visually balanced on mobile and desktop after the stats removal (no awkward empty spacing or misalignment).",
-        "No other marketing sections (Services, Process, FAQ, Contact), header, or footer content is removed or changed unintentionally."
+        "No visible UI text contains the old brand name \"aurora\".",
+        "Header and footer branding/alt text reflect \"Wed Shilpi\".",
+        "Footer copyright line reflects \"Wed Shilpi\"."
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Remove the pricing-related FAQ item from the FAQ section so no FAQ question/answer discusses or lists pricing ranges.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "1) Can you please remove the pricing part in FAQs."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The FAQ item \"How much does a website cost?\" is removed from the rendered FAQ accordion.",
+        "No remaining FAQ answers contain pricing figures or pricing ranges."
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Remove any mention of professional photography partners from the website content (including the FAQ answer about content and images).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "2) Remove telling about professional photography partners."
+        ]
+      },
+      "acceptanceCriteria": [
+        "No section (including FAQs) mentions recommending partners for professional photography.",
+        "The FAQ item about content/images is updated to remove the partner referral sentence while keeping the rest coherent in English."
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Remove the social media icons/links for Facebook, Instagram, X, and LinkedIn from the site (including the footer icon row).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "3) Remove social media icon of Facebook, insta,X,linkedin."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The footer no longer renders icons/links for Facebook, Instagram, X, or LinkedIn.",
+        "No social media icon components for those networks remain visible anywhere on the site."
       ]
     }
   ],
@@ -27,21 +78,11 @@
     "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui."
   ],
   "nonGoals": [
-    "Do not add new hero statistics or replacement content unless explicitly requested.",
-    "Do not change backend inquiry APIs or contact form behavior."
+    "Do not add new social media links or replace removed social icons with other networks.",
+    "Do not change the contact form fields, inquiry submission behavior, or backend inquiry API as part of this change."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
-  },
-  "userProfileUpdate": {
-    "goalsToAdd": [],
-    "goalsToRemove": [],
-    "preferencesToAdd": [],
-    "preferencesToRemove": [],
-    "miscToAdd": [],
-    "miscToRemove": [],
-    "fieldsToSet": {},
-    "fieldsToDelete": []
   }
 }

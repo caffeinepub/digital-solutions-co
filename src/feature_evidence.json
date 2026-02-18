@@ -2,10 +2,12 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-experience-and-projects-completed-stats-metrics-from-the-website-hero-section-so-they-are-no-longer-visible-anywhere-on-the-page",
-      "featureTitle": "Remove the \"Experience\" and \"Projects completed\" stats/metrics from the website hero section so they are no longer visible anywhere on the page.",
+      "featureId": "feature-replace-the-site-company-name-everywhere-in-user-facing-copy-from-aurora-to-wed-shilpi-including-header-footer-branding-text-image-alt-text-and-copyright-text-where-applicable",
+      "featureTitle": "Replace the site/company name everywhere in user-facing copy from \"aurora\" to \"Wed Shilpi\" (including header/footer branding text, image alt text, and copyright text where applicable).",
       "files": [
-        "frontend/src/components/marketing/HeroSection.tsx"
+        "frontend/index.html",
+        "frontend/src/components/layout/SiteFooter.tsx",
+        "frontend/src/components/layout/SiteHeader.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -15,7 +17,61 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-11"
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-pricing-related-faq-item-from-the-faq-section-so-no-faq-question-answer-discusses-or-lists-pricing-ranges",
+      "featureTitle": "Remove the pricing-related FAQ item from the FAQ section so no FAQ question/answer discusses or lists pricing ranges.",
+      "files": [
+        "frontend/src/components/marketing/FaqSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-any-mention-of-professional-photography-partners-from-the-website-content-including-the-faq-answer-about-content-and-images",
+      "featureTitle": "Remove any mention of professional photography partners from the website content (including the FAQ answer about content and images).",
+      "files": [
+        "frontend/src/components/marketing/FaqSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-social-media-icons-links-for-facebook-instagram-x-and-linkedin-from-the-site-including-the-footer-icon-row",
+      "featureTitle": "Remove the social media icons/links for Facebook, Instagram, X, and LinkedIn from the site (including the footer icon row).",
+      "files": [
+        "frontend/src/components/layout/SiteFooter.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
       ],
       "confidence": "high"
     }

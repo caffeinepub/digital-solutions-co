@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
+  "projectStateVersion": 7,
   "summary": "Create a modern, clean, trustworthy, business-focused marketing website for a web development & digital solutions company targeting non-technical small and medium-sized business owners, clearly explaining services and generating leads.",
   "architectural_notes": [],
   "known_issues": [],
@@ -85,6 +85,38 @@
         "REQ-11"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-replace-the-site-company-name-everywhere-in-user-facing-copy-from-aurora-to-wed-shilpi-including-header-footer-branding-text-image-alt-text-and-copyright-text-where-applicable",
+      "title": "Replace the site/company name everywhere in user-facing copy from \"aurora\" to \"Wed Shilpi\" (including header/footer branding text, image alt text, and copyright text where applicable).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-pricing-related-faq-item-from-the-faq-section-so-no-faq-question-answer-discusses-or-lists-pricing-ranges",
+      "title": "Remove the pricing-related FAQ item from the FAQ section so no FAQ question/answer discusses or lists pricing ranges.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-any-mention-of-professional-photography-partners-from-the-website-content-including-the-faq-answer-about-content-and-images",
+      "title": "Remove any mention of professional photography partners from the website content (including the FAQ answer about content and images).",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-social-media-icons-links-for-facebook-instagram-x-and-linkedin-from-the-site-including-the-footer-icon-row",
+      "title": "Remove the social media icons/links for Facebook, Instagram, X, and LinkedIn from the site (including the footer icon row).",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -123,6 +155,30 @@
     {
       "id": "AR-13",
       "summary": "Remove the \"Experience\" section and the \"Projects completed\" section from the website",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Rename site/company name in copy from \"aurora\" to \"Wed Shilpi\"",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Remove the pricing-related item/content from the FAQ section",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Remove any mention of professional photography partners from the website content",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Remove social media icons/links for Facebook, Instagram, X, and LinkedIn from the site",
       "reqIds": [],
       "status": "pending"
     }

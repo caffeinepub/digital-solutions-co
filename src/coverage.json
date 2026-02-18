@@ -1,35 +1,74 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-18T13:12:31.669Z",
+  "generatedAt": "2026-02-18T13:21:53.147Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 1,
-    "implemented": 1,
+    "total": 4,
+    "implemented": 4,
     "items": [
       {
-        "id": "REQ-11",
-        "summary": "Remove the \"Experience\" and \"Projects completed\" stats/metrics from the website hero section so they are no longer visible anywhere on the page.",
+        "id": "REQ-12",
+        "summary": "Replace the site/company name everywhere in user-facing copy from \"aurora\" to \"Wed Shilpi\" (including header/footer branding text, image alt text, and copyright text where applicable).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/marketing/HeroSection.tsx"
+          "frontend/src/components/layout/SiteHeader.tsx",
+          "frontend/src/components/layout/SiteFooter.tsx",
+          "frontend/index.html"
         ],
         "matchedFiles": [
-          "frontend/src/components/marketing/HeroSection.tsx"
+          "frontend/src/components/layout/SiteHeader.tsx",
+          "frontend/src/components/layout/SiteFooter.tsx",
+          "frontend/index.html"
+        ]
+      },
+      {
+        "id": "REQ-13",
+        "summary": "Remove the pricing-related FAQ item from the FAQ section so no FAQ question/answer discusses or lists pricing ranges.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/marketing/FaqSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/marketing/FaqSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-14",
+        "summary": "Remove any mention of professional photography partners from the website content (including the FAQ answer about content and images).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/marketing/FaqSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/marketing/FaqSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-15",
+        "summary": "Remove the social media icons/links for Facebook, Instagram, X, and LinkedIn from the site (including the footer icon row).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/layout/SiteFooter.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/layout/SiteFooter.tsx"
         ]
       }
     ]
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/README.md",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/marketing/HeroSection.tsx",
+    "frontend/index.html",
+    "frontend/src/components/layout/SiteFooter.tsx",
+    "frontend/src/components/layout/SiteHeader.tsx",
+    "frontend/src/components/marketing/FaqSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

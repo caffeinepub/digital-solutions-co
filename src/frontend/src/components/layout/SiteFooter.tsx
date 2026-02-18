@@ -1,11 +1,10 @@
 import { Mail, MessageCircle } from 'lucide-react';
-import { SiFacebook, SiX, SiLinkedin, SiInstagram } from 'react-icons/si';
 import { getWhatsAppLink, getEmailLink } from '@/lib/inquiryLinks';
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
   const appIdentifier = encodeURIComponent(
-    typeof window !== 'undefined' ? window.location.hostname : 'clientsite-studio'
+    typeof window !== 'undefined' ? window.location.hostname : 'wed-shilpi'
   );
 
   const scrollToSection = (id: string) => {
@@ -23,7 +22,7 @@ export function SiteFooter() {
           <div className="space-y-4">
             <img
               src="/assets/generated/logo-wordmark.dim_512x160.png"
-              alt="ClientSite Studio"
+              alt="Wed Shilpi"
               className="h-8 w-auto"
               width={512}
               height={160}
@@ -102,43 +101,13 @@ export function SiteFooter() {
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp
               </a>
-              <div className="flex gap-4 pt-2">
-                <a
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="Facebook"
-                >
-                  <SiFacebook className="h-5 w-5" />
-                </a>
-                <a
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="X (Twitter)"
-                >
-                  <SiX className="h-5 w-5" />
-                </a>
-                <a
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <SiLinkedin className="h-5 w-5" />
-                </a>
-                <a
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="Instagram"
-                >
-                  <SiInstagram className="h-5 w-5" />
-                </a>
-              </div>
             </div>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
           <p>
-            © {currentYear} ClientSite Studio. All rights reserved. Built with ❤️ using{' '}
+            © {currentYear} Wed Shilpi. All rights reserved. Built with ❤️ using{' '}
             <a
               href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appIdentifier}`}
               target="_blank"

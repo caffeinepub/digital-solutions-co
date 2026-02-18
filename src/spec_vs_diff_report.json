@@ -1,14 +1,46 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-18T13:12:31.666Z",
-  "summary": "The diff updates the HeroSection component to remove the hero stats/metrics block entirely. No edits are shown to backend inquiry APIs, contact form behavior, or the immutable frontend hook/UI paths listed in the constraints.",
-  "missing_requirements": [],
-  "hallucinated_features": [],
-  "confidence": 0.74,
+  "generatedAt": "2026-02-18T13:21:53.144Z",
+  "summary": "Diff implements the FAQ removals/edits (pricing question removed; photography partner referral removed) and updates header/footer/index.html branding to “Wed Shilpi”. Social icons appear removed from the footer, but the diff summary does not provide enough evidence to confirm brand rename and social-icon removal across all other site locations.",
+  "missing_requirements": [
+    {
+      "id": "REQ-12",
+      "requirement": "Replace the site/company name everywhere in user-facing copy from \"aurora\" to \"Wed Shilpi\" (including header/footer branding text, image alt text, and copyright text where applicable).",
+      "reason": "The diff shows updates in the header/footer image alt text and footer copyright, and index.html title, but provides no evidence that all other user-facing copy across the site was checked/updated (e.g., Hero/Services/Process/Contact copy).",
+      "evidence": [
+        "frontend/src/components/layout/SiteHeader.tsx",
+        "frontend/src/components/layout/SiteFooter.tsx",
+        "frontend/index.html",
+        "frontend-file-summaries.txt (mentions other sections but does not show their copy)"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "requirement": "Remove the social media icons/links for Facebook, Instagram, X, and LinkedIn from the site (including the footer icon row).",
+      "reason": "Footer appears to have removed social icons/links (only Email/WhatsApp are shown), but the diff summary does not provide evidence that no Facebook/Instagram/X/LinkedIn icons/links remain elsewhere on the site.",
+      "evidence": [
+        "frontend/src/components/layout/SiteFooter.tsx (truncated; footer shows only Mail/MessageCircle imports and Email/WhatsApp links)",
+        "frontend-file-summaries.txt (claims social media icons removed, but does not enumerate all locations)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Added/retained a Caffeine.ai attribution link with UTM tracking in the footer.",
+      "reason": "BuildRequest did not ask to add or modify third-party attribution/UTM tracking links; this appears unrelated to renaming/removals.",
+      "evidence": [
+        "frontend/src/components/layout/SiteFooter.tsx (shows Caffeine.ai link with utm_* params; truncated)"
+      ]
+    }
+  ],
+  "confidence": 0.62,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/components/marketing/HeroSection.tsx",
+    "frontend/index.html",
+    "frontend/src/components/layout/SiteFooter.tsx",
+    "frontend/src/components/layout/SiteHeader.tsx",
+    "frontend/src/components/marketing/FaqSection.tsx",
     "project_state.json"
   ]
 }

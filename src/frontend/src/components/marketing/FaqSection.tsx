@@ -11,10 +11,6 @@ const faqs = [
     answer: 'Most projects take 2-4 weeks from start to finish, depending on complexity. A simple brochure website can be ready in 2 weeks, while more complex sites with custom features may take 4-6 weeks. We\'ll give you a clear timeline during our initial consultation.',
   },
   {
-    question: 'How much does a website cost?',
-    answer: 'Our pricing is transparent and tailored to your needs. A basic business website starts around $1,500, while more complex sites with custom features range from $3,000-$8,000. We offer flexible payment plans and will provide a detailed quote after understanding your requirements.',
-  },
-  {
     question: 'Do I need technical knowledge to manage my website?',
     answer: 'Not at all! We build user-friendly websites that you can easily update yourself. We provide training and documentation so you can add content, update images, and make simple changes. For anything technical, our support team is always here to help.',
   },
@@ -28,7 +24,7 @@ const faqs = [
   },
   {
     question: 'Can you help with website content and images?',
-    answer: 'Yes! We can help you create compelling content that speaks to your audience. We also source professional stock images or can work with photos you provide. If you need professional photography, we can recommend trusted partners.',
+    answer: 'Yes! We can help you create compelling content that speaks to your audience. We also source professional stock images or can work with photos you provide.',
   },
 ];
 

@@ -29,7 +29,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <img
             src="/assets/generated/logo-wordmark.dim_512x160.png"
-            alt="ClientSite Studio"
+            alt="Wed Shilpi"
             className="h-8 w-auto"
             width={512}
             height={160}
