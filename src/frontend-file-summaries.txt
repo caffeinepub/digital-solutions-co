@@ -1,0 +1,15 @@
+{
+  "frontend/src/index.css": "Global styles with warm amber/orange OKLCH color system, custom typography scale, and utility classes for consistent section padding and spacing throughout the site.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with Inter font family, warm color palette tokens, custom shadows, and fade-in animation for polished UI interactions.",
+  "frontend/src/App.tsx": "Main application component composing the complete marketing site with header, hero, services, process, FAQ, contact sections, and footer in a single-page layout.",
+  "frontend/src/components/layout/SiteHeader.tsx": "Sticky header with logo, responsive navigation menu (desktop and mobile), and prominent WhatsApp/Email CTAs with smooth scroll-to-section functionality.",
+  "frontend/src/components/layout/SiteFooter.tsx": "Professional footer with brand info, quick links, services list, contact options, social media icons, and Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/marketing/HeroSection.tsx": "Above-the-fold hero section featuring headline, value proposition, primary CTAs (Request Quote and WhatsApp), and hero illustration with decorative elements.",
+  "frontend/src/components/marketing/ServicesSection.tsx": "Services showcase displaying all five service offerings in responsive card grid with icons, descriptions, and individual CTAs linking to contact form.",
+  "frontend/src/components/marketing/ProcessSection.tsx": "Five-step process visualization (Discover, Design, Build, Launch, Support) with icons, numbered badges, and connecting lines for desktop view.",
+  "frontend/src/components/marketing/FaqSection.tsx": "Accordion-based FAQ section with six common questions covering timeline, pricing, technical requirements, post-launch support, mobile responsiveness, and content assistance.",
+  "frontend/src/components/marketing/ContactSection.tsx": "Comprehensive contact section with WhatsApp/Email quick actions, business hours, and full inquiry form with validation, loading states, and success/error handling.",
+  "frontend/src/lib/inquiryLinks.ts": "Helper functions generating pre-filled WhatsApp and mailto links with appropriate quote request messages for seamless user inquiry experience.",
+  "frontend/src/hooks/useSubmitInquiryMutation.ts": "React Query mutation hook for submitting contact form inquiries to the backend with error handling and query invalidation.",
+  "frontend/index.html": "HTML entry point with proper meta tags, SEO-friendly title and description for the ClientSite Studio marketing website."
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Remove hero stats for experience and projects completed",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "summary": "Remove the Experience and Projects Completed hero stats while keeping the hero layout balanced across breakpoints.",
+      "acceptanceCriteria": [
+        "The homepage hero no longer displays the labels \"Experience\" or \"Completed\" (nor the paired stats such as \"5+\" years and \"50+\" projects).",
+        "Hero section layout remains visually balanced on mobile and desktop after the stats removal (no awkward empty spacing or misalignment).",
+        "No other marketing sections (Services, Process, FAQ, Contact), header, or footer content is removed or changed unintentionally."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Remove the hero metrics/stats block that shows \"Years / Experience\" and \"Projects / Completed\" (including their numeric badges), and adjust surrounding spacing/classes as needed so the hero content remains visually balanced on mobile and desktop."
+        }
+      ]
+    }
+  ]
+}

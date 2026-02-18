@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "IC actor storing unique inquiries using a Set and exposing submit and query functions.",
+  "feature_evidence.json": "Lists feature evidence showing removal of hero metrics tied to HeroSection.tsx.",
+  "frontend-file-summaries.txt": "JSON mapping of frontend file paths to brief descriptions of their purpose.",
+  "frontend/index.css": "Tailwind base styles with extensive CSS variables for light/dark themes and global background/foreground rules.",
+  "frontend/index.html": "HTML entry file mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Top-level layout composing header, hero, services, process, FAQ, contact, and footer sections.",
+  "frontend/src/components/layout/SiteFooter.tsx": "Footer with branding, navigation links, services list, and contact/CTA links.",
+  "frontend/src/components/layout/SiteHeader.tsx": "Sticky responsive header with navigation, email/WhatsApp CTAs, and mobile sheet menu.",
+  "frontend/src/components/marketing/ContactSection.tsx": "Contact form with validation, WhatsApp/email options, and inquiry submission via mutation hook.",
+  "frontend/src/components/marketing/FaqSection.tsx": "Accordion-based FAQ list with six predefined questions and answers.",
+  "frontend/src/components/marketing/HeroSection.tsx": "Marketing hero section with headline, description, CTA buttons, and an illustration.",
+  "frontend/src/components/marketing/ProcessSection.tsx": "Displays a five-step workflow with icons and descriptions for the company's process.",
+  "frontend/src/components/marketing/ServicesSection.tsx": "Renders a grid of service cards with icons, descriptions, and CTAs linking to the contact section.",
+  "frontend/src/hooks/useActor.ts": "Creates and manages a backend actor based on Internet Identity, refetching dependent queries when identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides context and hooks for managing Internet Identity authentication state and login flow.",
+  "frontend/src/hooks/useSubmitInquiryMutation.ts": "Mutation hook that submits an inquiry via the backend actor and invalidates the inquiries query on success.",
+  "frontend/src/index.css": "Tailwind base styles and custom design tokens defining a warm color palette and utility classes.",
+  "frontend/src/lib/inquiryLinks.ts": "Generates prefilled WhatsApp and email inquiry links with default contact info and messages.",
+  "frontend/src/main.tsx": "App bootstrap that sets up React Query, Internet Identity provider, and global styles.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme colors, fonts, animations, and enabling plugins.",
+  "project_state.json": "Defines project metadata, current feature set, and requirements for building a business-focused marketing website. Lists implemented features like site structure, services content, trust-building sections, and lead-generation elements."
+}

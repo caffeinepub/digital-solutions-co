@@ -1,0 +1,14 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-18T13:12:31.666Z",
+  "summary": "The diff updates the HeroSection component to remove the hero stats/metrics block entirely. No edits are shown to backend inquiry APIs, contact form behavior, or the immutable frontend hook/UI paths listed in the constraints.",
+  "missing_requirements": [],
+  "hallucinated_features": [],
+  "confidence": 0.74,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/marketing/HeroSection.tsx",
+    "project_state.json"
+  ]
+}

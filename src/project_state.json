@@ -1,0 +1,133 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Create a modern, clean, trustworthy, business-focused marketing website for a web development & digital solutions company targeting non-technical small and medium-sized business owners, clearly explaining services and generating leads.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-modern-professional-business-focused-marketing-website-for-a-web-development-digital-solutions-company-targeting-non-technical-small-and-medium-sized-business-owners-with-clear-english-copy-throughout",
+      "title": "Create a modern, professional, business-focused marketing website for a web development/digital solutions company targeting non-technical small and medium-sized business owners, with clear English copy throughout.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-coherent-visual-theme-colors-typography-spacing-components-and-apply-it-consistently-across-all-pages-sections-avoid-a-blue-purple-palette",
+      "title": "Implement a coherent visual theme (colors, typography, spacing, components) and apply it consistently across all pages/sections; avoid a blue+purple palette.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-clear-site-structure-and-navigation-with-at-minimum-home-services-and-contact-sections-as-separate-routes-or-anchored-sections-plus-a-persistent-header-and-footer",
+      "title": "Add a clear site structure and navigation with at minimum: Home, Services, and Contact sections (as separate routes or anchored sections), plus a persistent header and footer.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-services-presentation-that-includes-verbatim-service-names-business-brochure-websites-company-profile-websites-landing-pages-website-redesign-website-maintenance-and-support-each-service-must-include-a-brief-non-technical-description-and-a-cta-to-contact",
+      "title": "Create a Services presentation that includes (verbatim service names): Business brochure websites, Company profile websites, Landing pages, Website redesign, Website maintenance and support; each service must include a brief non-technical description and a CTA to contact.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-trust-building-content-sections-suitable-for-non-technical-business-owners-including-at-least-a-simple-process-steps-section-e-g-discover-design-build-launch-support-and-a-lightweight-faq-section-addressing-common-concerns-timeline-pricing-approach-maintenance",
+      "title": "Add trust-building content sections suitable for non-technical business owners, including at least: a simple process/steps section (e.g., Discover → Design → Build → Launch → Support) and a lightweight FAQ section addressing common concerns (timeline, pricing approach, maintenance).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-lead-generation-via-a-contact-form-that-collects-at-minimum-name-email-or-phone-business-name-optional-service-needed-select-message-include-client-side-validation-and-a-clear-success-failure-state",
+      "title": "Implement lead generation via a Contact form that collects at minimum: name, email or phone, business name (optional), service needed (select), message; include client-side validation and a clear success/failure state.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-one-click-inquiry-options-for-whatsapp-and-email-mailto-visible-near-primary-ctas-and-in-the-contact-section-with-pre-filled-message-text-indicating-the-user-is-requesting-a-website-quote",
+      "title": "Add one-click inquiry options for WhatsApp and email (mailto), visible near primary CTAs and in the Contact section, with pre-filled message text indicating the user is requesting a website quote.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-connect-the-frontend-contact-form-submission-to-the-backend-inquiry-api-using-react-query-mutation-patterns-and-display-submission-status-to-the-user",
+      "title": "Connect the frontend Contact form submission to the backend inquiry API using React Query mutation patterns and display submission status to the user.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-static-generated-brand-visuals-and-incorporate-them-into-the-ui-a-simple-wordmark-logo-and-a-homepage-hero-illustration-served-from-frontend-public-assets-generated-and-referenced-directly-by-the-frontend",
+      "title": "Add static generated brand visuals and incorporate them into the UI: a simple wordmark logo and a homepage hero illustration, served from frontend/public/assets/generated and referenced directly by the frontend.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-experience-and-projects-completed-stats-metrics-from-the-website-hero-section-so-they-are-no-longer-visible-anywhere-on-the-page",
+      "title": "Remove the \"Experience\" and \"Projects completed\" stats/metrics from the website hero section so they are no longer visible anywhere on the page.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Design and build a modern, professional company website for a web development/digital solutions team serving small and medium-sized business clients",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Include clear services presentation (brochure sites, company profile sites, landing pages, redesign, maintenance/support)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add lead generation via contact form plus WhatsApp and email inquiry options",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Ensure site content and layout focus on clarity and trust-building for non-technical business owners",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Create a backend inquiry submission API in the single Motoko actor to receive contact form submissions and persist them in stable memory for later retrieval.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Remove the \"Experience\" section and the \"Projects completed\" section from the website",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "ClientSite Studio",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

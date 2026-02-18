@@ -1,0 +1,47 @@
+{
+  "kind": "build_request",
+  "title": "Remove hero stats for experience and projects completed",
+  "projectName": "ClientSite Studio",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "text": "Remove the \"Experience\" and \"Projects completed\" stats/metrics from the website hero section so they are no longer visible anywhere on the page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Yes but can you remove the expereience part and projects completed part?"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The homepage hero no longer displays the labels \"Experience\" or \"Completed\" (nor the paired stats such as \"5+\" years and \"50+\" projects).",
+        "Hero section layout remains visually balanced on mobile and desktop after the stats removal (no awkward empty spacing or misalignment).",
+        "No other marketing sections (Services, Process, FAQ, Contact), header, or footer content is removed or changed unintentionally."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui."
+  ],
+  "nonGoals": [
+    "Do not add new hero statistics or replacement content unless explicitly requested.",
+    "Do not change backend inquiry APIs or contact form behavior."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}
