@@ -1,10 +1,14 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 7,
+  "projectStateVersion": 11,
   "summary": "Create a modern, clean, trustworthy, business-focused marketing website for a web development & digital solutions company targeting non-technical small and medium-sized business owners, clearly explaining services and generating leads.",
-  "architectural_notes": [],
-  "known_issues": [],
-  "isFixRequest": false,
+  "architectural_notes": [
+    "Inquiry contact details to configure: WhatsApp numbers +91 8095126443 and +91 9663848939; email (mailto) priyankadbrao@gmail.com."
+  ],
+  "known_issues": [
+    "WhatsApp inquiry button/link reported as not working; verify the WhatsApp deep link format and update configured number(s)."
+  ],
+  "isFixRequest": true,
   "existing_features": [
     {
       "id": "feature-create-a-modern-professional-business-focused-marketing-website-for-a-web-development-digital-solutions-company-targeting-non-technical-small-and-medium-sized-business-owners-with-clear-english-copy-throughout",
@@ -117,6 +121,46 @@
         "REQ-15"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-replace-the-company-brand-name-everywhere-in-user-facing-text-from-wed-shilpi-to-web-shilpi-including-page-metadata-document-title-header-footer-branding-text-image-alt-text-and-copyright-text",
+      "title": "Replace the company/brand name everywhere in user-facing text from \"Wed Shilpi\" to \"Web Shilpi\", including page metadata (document title), header/footer branding text, image alt text, and copyright text.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-footer-utm-app-identifier-fallback-string-to-match-the-corrected-brand-name-use-a-web-shilpi-fallback-instead-of-wed-shilpi",
+      "title": "Update the footer UTM app identifier fallback string to match the corrected brand name (use a \"web-shilpi\" fallback instead of \"wed-shilpi\").",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-generated-wordmark-logo-image-to-display-the-corrected-brand-name-web-shilpi-and-update-the-app-to-reference-the-corrected-asset-filename-consistently",
+      "title": "Update the generated wordmark logo image to display the corrected brand name \"Web Shilpi\" and update the app to reference the corrected asset filename consistently.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-configured-contact-link-generators-to-use-the-provided-whatsapp-phone-numbers-and-email-address-ensuring-the-whatsapp-deep-link-format-works-reliably-wa-me-must-contain-digits-only-without-spaces-or-other-characters",
+      "title": "Update the configured contact link generators to use the provided WhatsApp phone numbers and email address, ensuring the WhatsApp deep link format works reliably (wa.me must contain digits only, without '+', spaces, or other characters).",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-ui-locations-that-currently-link-to-a-single-whatsapp-contact-to-support-the-two-provided-whatsapp-numbers-so-a-visitor-can-choose-either-number-from-the-site-s-whatsapp-ctas-header-footer-and-contact-section",
+      "title": "Update all UI locations that currently link to a single WhatsApp contact to support the two provided WhatsApp numbers, so a visitor can choose either number from the site’s WhatsApp CTAs (Header, Footer, and Contact section).",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -159,12 +203,6 @@
       "status": "pending"
     },
     {
-      "id": "AR-14",
-      "summary": "Rename site/company name in copy from \"aurora\" to \"Wed Shilpi\"",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
       "id": "AR-15",
       "summary": "Remove the pricing-related item/content from the FAQ section",
       "reqIds": [],
@@ -179,6 +217,18 @@
     {
       "id": "AR-17",
       "summary": "Remove social media icons/links for Facebook, Instagram, X, and LinkedIn from the site",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Rename site/company name in copy to \"Web Shilpi\" (correcting prior \"Wed Shilpi\")",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Update one-click inquiry contact details: set WhatsApp link/number(s) and mailto email to provided values",
       "reqIds": [],
       "status": "pending"
     }

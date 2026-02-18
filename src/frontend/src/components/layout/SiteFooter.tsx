@@ -1,10 +1,11 @@
 import { Mail, MessageCircle } from 'lucide-react';
-import { getWhatsAppLink, getEmailLink } from '@/lib/inquiryLinks';
+import { getWhatsAppLink1, getWhatsAppLink2, getEmailLink } from '@/lib/inquiryLinks';
+import { BRAND_NAME, BRAND_TAGLINE } from '@/lib/brand';
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
   const appIdentifier = encodeURIComponent(
-    typeof window !== 'undefined' ? window.location.hostname : 'wed-shilpi'
+    typeof window !== 'undefined' ? window.location.hostname : 'web-shilpi'
   );
 
   const scrollToSection = (id: string) => {
@@ -21,14 +22,14 @@ export function SiteFooter() {
           {/* Brand */}
           <div className="space-y-4">
             <img
-              src="/assets/generated/logo-wordmark.dim_512x160.png"
-              alt="Wed Shilpi"
+              src="/assets/generated/logo-wordmark-web-shilpi.dim_512x160.png"
+              alt={BRAND_NAME}
               className="h-8 w-auto"
               width={512}
               height={160}
             />
             <p className="text-sm text-muted-foreground">
-              Professional websites for small and medium-sized businesses.
+              {BRAND_TAGLINE}
             </p>
           </div>
 
@@ -94,20 +95,30 @@ export function SiteFooter() {
                 <Mail className="h-4 w-4" />
                 Email Us
               </a>
-              <a
-                href={getWhatsAppLink()}
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <MessageCircle className="h-4 w-4" />
-                WhatsApp
-              </a>
+              <div className="space-y-2">
+                <p className="text-sm font-medium">WhatsApp</p>
+                <a
+                  href={getWhatsAppLink1()}
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  +91 8095126443
+                </a>
+                <a
+                  href={getWhatsAppLink2()}
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  +91 9663848939
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
           <p>
-            © {currentYear} Wed Shilpi. All rights reserved. Built with ❤️ using{' '}
+            © {currentYear} {BRAND_NAME}. All rights reserved. Built with ❤️ using{' '}
             <a
               href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appIdentifier}`}
               target="_blank"

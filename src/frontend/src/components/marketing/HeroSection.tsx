@@ -1,6 +1,12 @@
 import { ArrowRight, Mail, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { getWhatsAppLink, getEmailLink } from '@/lib/inquiryLinks';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { getWhatsAppLink1, getWhatsAppLink2, getEmailLink } from '@/lib/inquiryLinks';
 
 export function HeroSection() {
   const scrollToContact = () => {
@@ -30,12 +36,26 @@ export function HeroSection() {
                 Request a Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href={getWhatsAppLink()} className="flex items-center gap-2">
-                  <MessageCircle className="h-5 w-5" />
-                  WhatsApp Us
-                </a>
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button size="lg" variant="outline" className="flex items-center gap-2">
+                    <MessageCircle className="h-5 w-5" />
+                    WhatsApp Us
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start">
+                  <DropdownMenuItem asChild>
+                    <a href={getWhatsAppLink1()} className="cursor-pointer">
+                      +91 8095126443
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href={getWhatsAppLink2()} className="cursor-pointer">
+                      +91 9663848939
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
 

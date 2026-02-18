@@ -2,7 +2,14 @@ import { useState } from 'react';
 import { Menu, X, Mail, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { getWhatsAppLink, getEmailLink } from '@/lib/inquiryLinks';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { getWhatsAppLink1, getWhatsAppLink2, getEmailLink } from '@/lib/inquiryLinks';
+import { BRAND_NAME } from '@/lib/brand';
 
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,8 +35,8 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <img
-            src="/assets/generated/logo-wordmark.dim_512x160.png"
-            alt="Wed Shilpi"
+            src="/assets/generated/logo-wordmark-web-shilpi.dim_512x160.png"
+            alt={BRAND_NAME}
             className="h-8 w-auto"
             width={512}
             height={160}
@@ -61,15 +68,26 @@ export function SiteHeader() {
               Email
             </a>
           </Button>
-          <Button
-            size="sm"
-            asChild
-          >
-            <a href={getWhatsAppLink()} className="flex items-center gap-2">
-              <MessageCircle className="h-4 w-4" />
-              WhatsApp
-            </a>
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button size="sm" className="flex items-center gap-2">
+                <MessageCircle className="h-4 w-4" />
+                WhatsApp
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem asChild>
+                <a href={getWhatsAppLink1()} className="cursor-pointer">
+                  +91 8095126443
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href={getWhatsAppLink2()} className="cursor-pointer">
+                  +91 9663848939
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         {/* Mobile Menu */}
@@ -97,12 +115,21 @@ export function SiteHeader() {
                     Email Us
                   </a>
                 </Button>
-                <Button asChild>
-                  <a href={getWhatsAppLink()} className="flex items-center gap-2 justify-center">
-                    <MessageCircle className="h-4 w-4" />
-                    WhatsApp
-                  </a>
-                </Button>
+                <div className="space-y-2">
+                  <p className="text-sm font-medium text-center text-muted-foreground">WhatsApp</p>
+                  <Button asChild className="w-full">
+                    <a href={getWhatsAppLink1()} className="flex items-center gap-2 justify-center">
+                      <MessageCircle className="h-4 w-4" />
+                      +91 8095126443
+                    </a>
+                  </Button>
+                  <Button asChild className="w-full">
+                    <a href={getWhatsAppLink2()} className="flex items-center gap-2 justify-center">
+                      <MessageCircle className="h-4 w-4" />
+                      +91 9663848939
+                    </a>
+                  </Button>
+                </div>
               </div>
             </nav>
           </SheetContent>

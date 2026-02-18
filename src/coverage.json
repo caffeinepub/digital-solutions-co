@@ -1,61 +1,41 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-18T13:21:53.147Z",
+  "generatedAt": "2026-02-18T13:57:36.257Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 4,
-    "implemented": 4,
+    "total": 2,
+    "implemented": 2,
     "items": [
       {
-        "id": "REQ-12",
-        "summary": "Replace the site/company name everywhere in user-facing copy from \"aurora\" to \"Wed Shilpi\" (including header/footer branding text, image alt text, and copyright text where applicable).",
+        "id": "REQ-19",
+        "summary": "Update the configured contact link generators to use the provided WhatsApp phone numbers and email address, ensuring the WhatsApp deep link format works reliably (wa.me must contain digits only, without '+', spaces, or other characters).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/lib/inquiryLinks.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/lib/inquiryLinks.ts"
+        ]
+      },
+      {
+        "id": "REQ-20",
+        "summary": "Update all UI locations that currently link to a single WhatsApp contact to support the two provided WhatsApp numbers, so a visitor can choose either number from the site’s WhatsApp CTAs (Header, Footer, and Contact section).",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/layout/SiteHeader.tsx",
           "frontend/src/components/layout/SiteFooter.tsx",
-          "frontend/index.html"
+          "frontend/src/components/marketing/ContactSection.tsx",
+          "frontend/src/components/marketing/HeroSection.tsx"
         ],
         "matchedFiles": [
           "frontend/src/components/layout/SiteHeader.tsx",
           "frontend/src/components/layout/SiteFooter.tsx",
-          "frontend/index.html"
-        ]
-      },
-      {
-        "id": "REQ-13",
-        "summary": "Remove the pricing-related FAQ item from the FAQ section so no FAQ question/answer discusses or lists pricing ranges.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/marketing/FaqSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/marketing/FaqSection.tsx"
-        ]
-      },
-      {
-        "id": "REQ-14",
-        "summary": "Remove any mention of professional photography partners from the website content (including the FAQ answer about content and images).",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/marketing/FaqSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/marketing/FaqSection.tsx"
-        ]
-      },
-      {
-        "id": "REQ-15",
-        "summary": "Remove the social media icons/links for Facebook, Instagram, X, and LinkedIn from the site (including the footer icon row).",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/layout/SiteFooter.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/layout/SiteFooter.tsx"
+          "frontend/src/components/marketing/ContactSection.tsx",
+          "frontend/src/components/marketing/HeroSection.tsx"
         ]
       }
     ]
@@ -65,10 +45,11 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/index.html",
     "frontend/src/components/layout/SiteFooter.tsx",
     "frontend/src/components/layout/SiteHeader.tsx",
-    "frontend/src/components/marketing/FaqSection.tsx",
+    "frontend/src/components/marketing/ContactSection.tsx",
+    "frontend/src/components/marketing/HeroSection.tsx",
+    "frontend/src/lib/inquiryLinks.ts",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

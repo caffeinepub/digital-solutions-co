@@ -12,7 +12,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { getWhatsAppLink, getEmailLink } from '@/lib/inquiryLinks';
+import { getWhatsAppLink1, getWhatsAppLink2, getEmailLink } from '@/lib/inquiryLinks';
 import { useSubmitInquiry } from '@/hooks/useSubmitInquiryMutation';
 
 export function ContactSection() {
@@ -128,10 +128,15 @@ ${formData.message}
                 </CardTitle>
                 <CardDescription>Get instant responses to your questions</CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="space-y-2">
                 <Button asChild className="w-full">
-                  <a href={getWhatsAppLink()}>
-                    Chat on WhatsApp
+                  <a href={getWhatsAppLink1()}>
+                    +91 8095126443
+                  </a>
+                </Button>
+                <Button asChild className="w-full">
+                  <a href={getWhatsAppLink2()}>
+                    +91 9663848939
                   </a>
                 </Button>
               </CardContent>
@@ -275,12 +280,12 @@ ${formData.message}
                         <SelectValue placeholder="Select a service" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="business-brochure">Business brochure websites</SelectItem>
-                        <SelectItem value="company-profile">Company profile websites</SelectItem>
-                        <SelectItem value="landing-page">Landing pages</SelectItem>
-                        <SelectItem value="redesign">Website redesign</SelectItem>
-                        <SelectItem value="maintenance">Website maintenance and support</SelectItem>
-                        <SelectItem value="other">Other / Not sure</SelectItem>
+                        <SelectItem value="business-website">Business Website</SelectItem>
+                        <SelectItem value="company-profile">Company Profile</SelectItem>
+                        <SelectItem value="landing-page">Landing Page</SelectItem>
+                        <SelectItem value="website-redesign">Website Redesign</SelectItem>
+                        <SelectItem value="maintenance">Maintenance & Support</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
                       </SelectContent>
                     </Select>
                     {errors.serviceNeeded && (
@@ -307,20 +312,15 @@ ${formData.message}
                   </div>
 
                   {isError && (
-                    <div className="flex items-start gap-2 p-4 rounded-lg bg-destructive/10 border border-destructive/20">
-                      <AlertCircle className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
-                      <div className="space-y-1">
-                        <p className="text-sm font-medium text-destructive">
-                          Failed to send message
-                        </p>
-                        <p className="text-sm text-destructive/80">
-                          {error?.message || 'Please try again or contact us via WhatsApp or email.'}
-                        </p>
-                      </div>
+                    <div className="flex items-center gap-2 p-4 rounded-lg bg-destructive/10 text-destructive">
+                      <AlertCircle className="h-5 w-5 flex-shrink-0" />
+                      <p className="text-sm">
+                        {error instanceof Error ? error.message : 'Failed to submit inquiry. Please try again.'}
+                      </p>
                     </div>
                   )}
 
-                  <Button type="submit" size="lg" className="w-full" disabled={isPending}>
+                  <Button type="submit" className="w-full" size="lg" disabled={isPending}>
                     {isPending ? (
                       <>
                         <span className="animate-spin mr-2">⏳</span>

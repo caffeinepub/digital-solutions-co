@@ -1,88 +1,67 @@
 {
   "kind": "build_request",
-  "title": "Rename brand to Wed Shilpi and remove pricing/partners/social icons",
-  "projectName": "Wed Shilpi",
+  "title": "Update WhatsApp numbers and contact email links",
+  "projectName": "Web Shilpi",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-12",
-      "text": "Replace the site/company name everywhere in user-facing copy from \"aurora\" to \"Wed Shilpi\" (including header/footer branding text, image alt text, and copyright text where applicable).",
+      "id": "REQ-19",
+      "text": "Update the configured contact link generators to use the provided WhatsApp phone numbers and email address, ensuring the WhatsApp deep link format works reliably (wa.me must contain digits only, without '+', spaces, or other characters).",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-10"
         ],
         "quotes": [
-          "Can you change the name aurora to Wed Shilpi."
+          "Okay whataspp number i have two.\n+91 8095126443\n+91 9663848939\n\nmail id: priyankadbrao@gmail.com"
         ]
       },
       "acceptanceCriteria": [
-        "No visible UI text contains the old brand name \"aurora\".",
-        "Header and footer branding/alt text reflect \"Wed Shilpi\".",
-        "Footer copyright line reflects \"Wed Shilpi\"."
+        "The generated email link uses: priyankadbrao@gmail.com",
+        "The generated WhatsApp links use digits-only phone numbers in wa.me format: 918095126443 and 919663848939",
+        "All WhatsApp links include the existing pre-filled inquiry message text"
       ]
     },
     {
-      "id": "REQ-13",
-      "text": "Remove the pricing-related FAQ item from the FAQ section so no FAQ question/answer discusses or lists pricing ranges.",
+      "id": "REQ-20",
+      "text": "Update all UI locations that currently link to a single WhatsApp contact to support the two provided WhatsApp numbers, so a visitor can choose either number from the site’s WhatsApp CTAs (Header, Footer, and Contact section).",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-10"
         ],
         "quotes": [
-          "1) Can you please remove the pricing part in FAQs."
+          "Okay whataspp number i have two.\n+91 8095126443\n+91 9663848939"
         ]
       },
       "acceptanceCriteria": [
-        "The FAQ item \"How much does a website cost?\" is removed from the rendered FAQ accordion.",
-        "No remaining FAQ answers contain pricing figures or pricing ranges."
-      ]
-    },
-    {
-      "id": "REQ-14",
-      "text": "Remove any mention of professional photography partners from the website content (including the FAQ answer about content and images).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "2) Remove telling about professional photography partners."
-        ]
-      },
-      "acceptanceCriteria": [
-        "No section (including FAQs) mentions recommending partners for professional photography.",
-        "The FAQ item about content/images is updated to remove the partner referral sentence while keeping the rest coherent in English."
-      ]
-    },
-    {
-      "id": "REQ-15",
-      "text": "Remove the social media icons/links for Facebook, Instagram, X, and LinkedIn from the site (including the footer icon row).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "3) Remove social media icon of Facebook, insta,X,linkedin."
-        ]
-      },
-      "acceptanceCriteria": [
-        "The footer no longer renders icons/links for Facebook, Instagram, X, or LinkedIn.",
-        "No social media icon components for those networks remain visible anywhere on the site."
+        "Site Header WhatsApp CTA provides access to both WhatsApp numbers (918095126443 and 919663848939) without removing the existing Email CTA",
+        "Site Footer WhatsApp link provides access to both WhatsApp numbers (918095126443 and 919663848939)",
+        "Contact section WhatsApp card provides access to both WhatsApp numbers (918095126443 and 919663848939)",
+        "No WhatsApp CTA on the site links to placeholder number(s) (e.g., '1234567890')"
       ]
     }
   ],
   "constraints": [
-    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui."
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui",
+    "Do not add real email-sending functionality; only update the existing mailto link behavior"
   ],
   "nonGoals": [
-    "Do not add new social media links or replace removed social icons with other networks.",
-    "Do not change the contact form fields, inquiry submission behavior, or backend inquiry API as part of this change."
+    "Implementing server-side email delivery",
+    "Adding third-party messaging integrations beyond the existing WhatsApp deep links"
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
   }
 }

@@ -1,76 +1,53 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Rename brand to Wed Shilpi and remove pricing/partners/social icons",
+  "title": "Update WhatsApp numbers and contact email links",
   "requirements": [
     {
-      "id": "REQ-12",
-      "summary": "Replace all user-facing branding text from \"aurora\" to \"Wed Shilpi\" across header/footer and document metadata (including relevant image alt text and copyright).",
+      "id": "REQ-19",
+      "summary": "Update inquiry link generators to use the provided email address and digits-only WhatsApp wa.me links while preserving the existing pre-filled inquiry message.",
       "acceptanceCriteria": [
-        "No visible UI text contains the old brand name \"aurora\".",
-        "Header and footer branding/alt text reflect \"Wed Shilpi\".",
-        "Footer copyright line reflects \"Wed Shilpi\"."
+        "The generated email link uses: priyankadbrao@gmail.com",
+        "The generated WhatsApp links use digits-only phone numbers in wa.me format: 918095126443 and 919663848939",
+        "All WhatsApp links include the existing pre-filled inquiry message text"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/lib/inquiryLinks.ts",
+          "operation": "modify",
+          "description": "Replace placeholder contact values with the provided email (priyankadbrao@gmail.com) and WhatsApp numbers; ensure wa.me numbers are digits-only (strip '+', spaces, and non-digits) and keep the existing pre-filled WhatsApp inquiry message text unchanged; expose helper(s) suitable for generating links for both WhatsApp numbers."
+        }
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "summary": "Update site WhatsApp CTAs to let visitors choose between the two WhatsApp numbers in Header, Footer, and Contact section (and remove any remaining placeholder WhatsApp links).",
+      "acceptanceCriteria": [
+        "Site Header WhatsApp CTA provides access to both WhatsApp numbers (918095126443 and 919663848939) without removing the existing Email CTA",
+        "Site Footer WhatsApp link provides access to both WhatsApp numbers (918095126443 and 919663848939)",
+        "Contact section WhatsApp card provides access to both WhatsApp numbers (918095126443 and 919663848939)",
+        "No WhatsApp CTA on the site links to placeholder number(s) (e.g., '1234567890')"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/layout/SiteHeader.tsx",
           "operation": "modify",
-          "description": "Update header branding copy for the logo image (e.g., replace the current brand alt text with \"Wed Shilpi\") and ensure no legacy brand name remains in any header-rendered text."
+          "description": "Update the desktop and mobile header WhatsApp CTA UI to provide two explicit WhatsApp choices (918095126443 and 919663848939) using the updated inquiry link generator(s), while keeping the existing Email CTA intact."
         },
         {
           "path": "frontend/src/components/layout/SiteFooter.tsx",
           "operation": "modify",
-          "description": "Update footer branding copy (logo alt text and the copyright line) to use \"Wed Shilpi\" and ensure no legacy brand name remains in user-facing footer text."
+          "description": "Update the footer WhatsApp link area to provide two WhatsApp choices (918095126443 and 919663848939) using the updated inquiry link generator(s), ensuring no placeholder WhatsApp number remains."
         },
         {
-          "path": "frontend/index.html",
+          "path": "frontend/src/components/marketing/ContactSection.tsx",
           "operation": "modify",
-          "description": "Update the document title (and any other visible metadata copy if applicable) to reflect the \"Wed Shilpi\" brand and remove the previous brand name."
-        }
-      ]
-    },
-    {
-      "id": "REQ-13",
-      "summary": "Remove the pricing-related FAQ entry so the FAQ section contains no pricing questions, figures, or ranges.",
-      "acceptanceCriteria": [
-        "The FAQ item \"How much does a website cost?\" is removed from the rendered FAQ accordion.",
-        "No remaining FAQ answers contain pricing figures or pricing ranges."
-      ],
-      "file_operations": [
+          "description": "Update the Contact section WhatsApp card to provide two WhatsApp choices (918095126443 and 919663848939) using the updated inquiry link generator(s), ensuring the Email card remains mailto-only (no email-sending logic added)."
+        },
         {
-          "path": "frontend/src/components/marketing/FaqSection.tsx",
+          "path": "frontend/src/components/marketing/HeroSection.tsx",
           "operation": "modify",
-          "description": "Remove the pricing FAQ item (question: \"How much does a website cost?\") from the FAQ list and review remaining FAQ answers to ensure none include pricing figures/ranges. Use the shadcn-ui Accordion already in this file to render the updated list; verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-14",
-      "summary": "Remove all mentions of professional photography partners from site content, including the content/images FAQ answer.",
-      "acceptanceCriteria": [
-        "No section (including FAQs) mentions recommending partners for professional photography.",
-        "The FAQ item about content/images is updated to remove the partner referral sentence while keeping the rest coherent in English."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/marketing/FaqSection.tsx",
-          "operation": "modify",
-          "description": "Edit the \"Can you help with website content and images?\" FAQ answer to remove the professional photography partner referral sentence while keeping the answer coherent and natural English. Use the shadcn-ui Accordion already in this file to render the updated content; verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-15",
-      "summary": "Remove Facebook, Instagram, X, and LinkedIn social icons/links from the site, including the footer icon row.",
-      "acceptanceCriteria": [
-        "The footer no longer renders icons/links for Facebook, Instagram, X, or LinkedIn.",
-        "No social media icon components for those networks remain visible anywhere on the site."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/layout/SiteFooter.tsx",
-          "operation": "modify",
-          "description": "Remove imports and rendered UI for the Facebook/Instagram/X/LinkedIn icon row (including associated anchor tags and aria-labels) so no social icons/links for those networks render in the footer."
+          "description": "Ensure the hero WhatsApp CTA no longer uses any placeholder number by wiring it to one of the real WhatsApp links or presenting the same two-number choice pattern used elsewhere, using the updated inquiry link generator(s)."
         }
       ]
     }
